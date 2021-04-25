@@ -4,8 +4,8 @@ public class Strings {
 
   public static void main(String[] args) {
 
-    var nome = "André";
-    var sobreNome = "Gomes";
+    var nome = "Eduardo";
+    var sobreNome = "Monteiro";
     final var nomeCompleto = nome + sobreNome;
 
     System.out.println(nome);

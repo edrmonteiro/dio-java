@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'ckeckstyle'
+    id 'pmd'
 }
 
 group 'one.digitalinnovation'
@@ -14,3 +16,17 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+checkstyle {
+    toolVerson = '8.21'
+    showViolations = true
+    configFile = file("config/checkstyle/checkstyle.xml")
+}
+
+pwd {
+    ruleSetFiles = files("config/pmd/releset.xml")
+    toolVersion = '6.15.0'
+    ignoreFailures = true
+    consoleOutput = true
+}
+
